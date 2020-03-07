@@ -1,0 +1,26 @@
+--Notes for Redux Learning ---
+
+Redux is a predictable state container for JS apps
+
+It has 2 key inputs:
+	1. Data sent from the server
+	2. User interaction with the UI/application
+	
+Redux manages application state in the store
+
+the core of redux is a publish/subscribe pattern (a observer pattern similar to event driven architecture
+
+A user interacting with the UI dispatches (publishes) an action. This contains a type (unique) and a payload
+
+3 core principles of Redux:
+
+1. Single source of truth - entire state of UI derived from single object
+2. state is read-only - state can only be changed when emitting an action which is just a plain JS object passed as an argument to the reducer
+3. changes are made with pure functions - state not updated directly. creates a new state object based on previous state; always return a new object
+
+
+___________________________________________
+
+A reducer is a function that takes state and action and returns a new state
+
+Redux has no knowledge of anything actually contained in a reducer
